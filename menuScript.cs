@@ -4,16 +4,19 @@ using System.Collections;
 using UnityEngine.SceneManagement; 
 
 public class menuScript : MonoBehaviour {
-    [SerializeField]
     public Canvas quitMenu;
+    public Canvas pauzeMenu;
     public Button startText;
     public Button exitText;
+
     void Start() {
 
         quitMenu = quitMenu.GetComponent<Canvas>();
+        pauzeMenu = pauzeMenu.GetComponent<Canvas>();
         startText = startText.GetComponent<Button>();
         exitText = exitText.GetComponent<Button>();
         quitMenu.enabled = false;
+        pauzeMenu.enabled = false;
 
     }
 
