@@ -9,13 +9,13 @@ public class pauseMenuScript : MonoBehaviour {
     public Button quitToMenuGameText;
     public Button exitGameText;
 
-    void Start () { 
+    void Start() {
 
         pauseMenu = pauseMenu.GetComponent<Canvas>();
         continueGameText = continueGameText.GetComponent<Button>();
         quitToMenuGameText = quitToMenuGameText.GetComponent<Button>();
         exitGameText = exitGameText.GetComponent<Button>();
-        pauseMenu.enabled = true;
+        pauseMenu.enabled = false;
 
     }
     public void QuitToMenuPress() {
@@ -33,10 +33,11 @@ public class pauseMenuScript : MonoBehaviour {
         Application.Quit();
 
     }
-    public void update() {
+    void Update() {
 
-        if (Input.GetKeyDown("escape")) {
-            pauseMenu.enabled = false;
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            print("jopefwj");
+            pauseMenu.enabled = !pauseMenu.enabled;
         }
 
     }
