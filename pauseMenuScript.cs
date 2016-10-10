@@ -36,7 +36,7 @@ public class pauseMenuScript : MonoBehaviour {
     public void update() {
 
         if (Input.GetKeyDown("escape")) {
-            pauseMenu.enabled = true;
+            pauseMenu.enabled = false;
         }
 
     }
